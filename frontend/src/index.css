@@ -1,0 +1,99 @@
+@import url('https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800;900&display=swap');
+
+@tailwind base;
+@tailwind components;
+@tailwind utilities;
+
+body {
+  margin: 0;
+  font-family: 'Inter', -apple-system, BlinkMacSystemFont, 'Segoe UI', 'Roboto', 'Oxygen',
+    'Ubuntu', 'Cantarell', 'Fira Sans', 'Droid Sans', 'Helvetica Neue',
+    sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+}
+
+code {
+  font-family: source-code-pro, Menlo, Monaco, Consolas, 'Courier New',
+    monospace;
+}
+
+/* Custom Scrollbar Styles */
+.custom-scrollbar::-webkit-scrollbar {
+  width: 6px;
+  height: 6px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-track {
+  background: rgba(0, 0, 0, 0.02);
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb {
+  background: rgba(99, 102, 241, 0.2);
+  border-radius: 8px;
+}
+
+.custom-scrollbar::-webkit-scrollbar-thumb:hover {
+  background: rgba(99, 102, 241, 0.4);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(4px);
+  }
+
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/* ===================== Print / PDF styles ===================== */
+@media print {
+
+  /* Hide everything by default */
+  body>* {
+    display: none !important;
+  }
+
+  /* Show only the print target */
+  #print-review-content,
+  #print-review-content * {
+    display: block !important;
+    visibility: visible !important;
+  }
+
+  #print-review-content {
+    position: fixed !important;
+    inset: 0 !important;
+    width: 100% !important;
+    background: #fff !important;
+    color: #111 !important;
+    font-family: 'Inter', sans-serif !important;
+    padding: 32px !important;
+    overflow: visible !important;
+  }
+
+  /* Code blocks */
+  #print-review-content pre {
+    background: #f3f4f6 !important;
+    color: #111 !important;
+    border: 1px solid #d1d5db !important;
+    border-radius: 6px !important;
+    padding: 12px !important;
+    white-space: pre-wrap !important;
+    word-break: break-word !important;
+    font-size: 11px !important;
+  }
+
+  /* Hide print button itself */
+  .print\\:hidden {
+    display: none !important;
+  }
+
+  @page {
+    margin: 20mm;
+  }
+}
