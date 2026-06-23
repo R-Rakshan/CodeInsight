@@ -13,7 +13,7 @@ const PORT = process.env.PORT || 5000;
 
 app.use(helmet());
 app.use(cors({
-  origin: ['http://localhost:3000', 'https://codeinsight.vercel.app'],
+  origin: ['http://localhost:3000', 'https://codeinsight-roan.vercel.app', 'https://codeinsight-roan.vercel.app'],
   credentials: true
 }));
 app.use(express.json({ limit: '10mb' }));
