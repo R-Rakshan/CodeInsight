@@ -171,7 +171,7 @@ const EmptyState = () => (
 
 const IssueCard = ({ issue, index }) => {
   const lineNumber = issue.lineNumber ?? issue.line_number;
-  const hasOptimized = !!(issue.optimizedCode || issue.optimized_code);
+  //const hasOptimized = !!(issue.optimizedCode || issue.optimized_code);
 
   return (
     <motion.article
